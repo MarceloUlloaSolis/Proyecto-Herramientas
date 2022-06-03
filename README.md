@@ -1,2 +1,12 @@
 # Proyecto-Herramientas
-Trabajos con software R y Epanet
+Analisis de simulacion de red hidraulica a traves de Epanet, R y Python
+
+
+# Epanet
+EPANET es un software libre, desarrollado por la EPA (Agencia de Protección Ambiental de los Estados Unidos), que realiza simulaciones del comportamiento hidráulico y de la calidad del agua en redes de tuberías a presión.
+
+# R
+R es un entorno de software libre (licencia GNU GLP) y lenguaje de programación interpretado, es decir, ejecuta las instrucciones directamente, sin una previa compilación del programa a instrucciones en lenguaje máquina.
+
+
+
