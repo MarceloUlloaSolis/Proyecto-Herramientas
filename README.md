@@ -9,4 +9,8 @@ EPANET es un software libre, desarrollado por la EPA (Agencia de Protección Amb
 R es un entorno de software libre (licencia GNU GLP) y lenguaje de programación interpretado, es decir, ejecuta las instrucciones directamente, sin una previa compilación del programa a instrucciones en lenguaje máquina.
 
 
+# Descarga de base de datos
+Se utilizara una base de datos actualizada de simulacion en Epanet, ademas se realizara una comparativa con algoritmos de deteccion y funciones obtenidas a traves del siguiente enlace: https://goo.gl/zLJpuD
+
+
 
