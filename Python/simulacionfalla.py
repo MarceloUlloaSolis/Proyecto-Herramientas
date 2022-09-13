@@ -1,10 +1,10 @@
 ""
-El siguiente ejemplo ejecuta mÃºltiples realizaciones de escenarios de fugas de
-tuberÃ­as donde a cada tuberÃ­a se le asigna una falla de probabilidad 
-relacionada con el diÃ¡metro de la tuberÃ­a y las ubicaciones de las fugas y las
+El siguiente ejemplo ejecuta multiples realizaciones de escenarios de fugas de
+tuberias donde a cada tuberia se le asigna una falla de probabilidad 
+relacionada con el diametro de la tuberia y las ubicaciones de las fugas y las
  duraciones se extraen de las distribuciones de probabilidad. Se grafica la 
  disponibilidad del servicio de agua y el nivel de agua del tanque para cada
- realizaciÃ³n.
+ realizacion.
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,9 +23,9 @@ wn.options.hydraulic.required_pressure = 15
 wn.options.hydraulic.minimum_pressure = 0
 
 
-# Defina la probabilidad de falla para cada tuberÃ­a, segÃºn el diÃ¡metro de la
-# tuberÃ­a. La probabilidad de falla debe sumar 1. Net3 tiene algunas tuberÃ­as 
-# con un diÃ¡metro = 99 pulgadas, para excluirlas del conjunto de ubicaciones 
+# Defina la probabilidad de falla para cada tuberia, segÃºn el diametro de la
+# tuberia. La probabilidad de falla debe sumar 1. Net3 tiene algunas tuberias 
+# con un diimetro = 99 pulgadas, para excluirlas del conjunto de ubicaciones 
 # de fugas factibles, use query_link_attribute
 
 pipe_diameters = wn.query_link_attribute('diameter', np.less_equal,
@@ -46,7 +46,7 @@ for i in range(5):
     # Seleccione el nÃºmero de fugas, valor aleatorio entre 1 y 5
     N = np.random.randint(1,5+1)
 
-    # Seleccione N tuberÃ­as Ãºnicas en funciÃ³n de la probabilidad de falla
+    # Seleccione N tuberias Ãºnicas en funcion de la probabilidad de falla
     pipes_to_fail = np.random.choice(failure_probability.index, 5,
                                      replace=False,
                                      p=failure_probability.values)
@@ -54,7 +54,7 @@ for i in range(5):
     # Seleccione tiempo de falla, dist uniforme, entre 1 y 10 horas
     time_of_failure = np.round(np.random.uniform(1,10,1)[0], 2)
 
-    #Seleccione la duraciÃ³n de la falla, dist uniforme, entre 12 y 24 horas
+    #Seleccione la duracion de la falla, dist uniforme, entre 12 y 24 horas
     duration_of_failure = np.round(np.random.uniform(12,24,1)[0], 2)
     
     # Agregar fugas al modelo
@@ -68,7 +68,7 @@ for i in range(5):
                           start_time=time_of_failure*3600,
                           end_time=(time_of_failure + duration_of_failure)*3600)
 
-    # Simule la hidrÃ¡ulica y almacene los resultados
+    # Simule la hidraulica y almacene los resultados
     wn.options.hydraulic.demand_model = 'PDD'
     sim = wntr.sim.WNTRSimulator(wn)
     print('Pipe Breaks: ' + str(pipes_to_fail) + ', Start Time: ' + \
