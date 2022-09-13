@@ -4,6 +4,7 @@ Analisis de simulacion de red hidraulica a traves de Epanet y Python. En Chile, 
 
 # Epanet
 EPANET es un software libre, desarrollado por la EPA (Agencia de Protección Ambiental de los Estados Unidos), que realiza simulaciones del comportamiento hidráulico y de la calidad del agua en redes de tuberías a presión. Para mas informacion en [wikipedia](https://en.wikipedia.org/wiki/EPANET)
+El kit de herramientas se puede descargar del siguiente [enlace](https://www.epa.gov/water-research/epanet)
 
 # LeakDB
 
