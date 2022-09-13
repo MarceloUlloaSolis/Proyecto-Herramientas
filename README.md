@@ -3,8 +3,28 @@ Analisis de simulacion de red hidraulica a traves de Epanet y Python. En Chile, 
 
 
 # Epanet
-EPANET es un software libre, desarrollado por la EPA (Agencia de Protección Ambiental de los Estados Unidos), que realiza simulaciones del comportamiento hidráulico y de la calidad del agua en redes de tuberías a presión. Para mas informacion en [wikipedia](https://en.wikipedia.org/wiki/EPANET)
-El kit de herramientas se puede descargar del siguiente [enlace](https://www.epa.gov/water-research/epanet)
+Epanet es un software libre, desarrollado por la EPA (Agencia de protección Ambiental de Estados Unidos), que realiza simulaciones del comportamiento hidráulico y de calidad de agua en redes de tuberías a presión. Está diseñado para el uso con sistemas de distribución de agua potable, aunque en general puede ser utilizado para el análisis de cualquier fluido no compresible con flujo a presión [4].
+En general, una red consta de tuberías, nodos (Conexión de tuberías), bombas, válvulas y tanques de almacenamiento o depósitos. Epanet determina el caudal que circula por cada una de las conducciones, la presión en cada uno de los nodos, el nivel de agua en cada estanque y la concentración de diferentes químicos a través de la red durante un determinado periodo de simulación analizando diferentes intervalos de tiempo. La información necesaria para diseñar un modelo de red de distribución debe por lo menos la siguiente:
+•	Dimensiones de tuberías.
+•	Materialidad de tuberías.
+•	Ubicación de nodos.
+•	Ubicación de elementos de red como válvulas, estanques, tuberías, controladores de flujos, entre otros.
+•	Demandas.
+
+	Epanet proporciona un entorno integrado bajo Windows, para la edición de los datos de entrada a la red, la realización de simulaciones hidráulicas y de la calidad del agua, y la visualización de resultados en una amplia variedad de formatos. Entre éstos se incluyen mapas de la red codificados por colores, tablas numéricas, gráficas de evolución y mapas de isolíneas.
+	Dos de los requisitos fundamentales para poder construir con garantías un modelo de la calidad del agua son la potencia de cálculo y la precisión del modelo hidráulico utilizado. Epanet contiene un simulador hidráulico muy avanzado que ofrece las siguientes prestaciones [5]:
+
+•	No existe límite en cuanto al tamaño de la red que puede procesarse. 
+•	 Las pérdidas de carga pueden calcularse mediante las fórmulas de Hazen-Williams, de DarcyWeisbach o de Chezy-Manning. 
+•	Contempla pérdidas menores en codos, accesorios, etc.
+•	Admite bombas de velocidad fija o variable. 
+•	 Determina el consumo energético y sus costes. 
+•	Permite considerar varios tipos de válvulas, tales como válvulas de corte, de retención, y reguladoras de presión o caudal. 
+•	 Admite depósitos de geometría variable (esto es, cuyo diámetro varíe con el nivel). 
+•	Permite considerar diferentes tipos de demanda en los nudos, cada uno con su propia curva de modulación en el tiempo.
+•	Permite modelar tomas de agua cuyo caudal dependa de la presión. 
+•	Admite leyes de control simples, basadas en el valor del nivel en los depósitos o en la hora prefijada por un temporizador, y leyes de control más complejas basadas en reglas lógicas.
+
 
 # LeakDB
 
